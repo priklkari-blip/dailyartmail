@@ -299,10 +299,10 @@ async def main():
         send_daily_digest,
         trigger="cron",
         hour=20,
-        minute=10,
+        minute=15,
     )
     scheduler.start()
-    logger.info("Расписание установлено: 20:10 по Москве")
+    logger.info("Расписание установлено: 20:15 по Москве")
 
     # Держим процесс живым
     while True:
