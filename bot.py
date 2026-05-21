@@ -298,8 +298,8 @@ async def main():
     scheduler.add_job(
         send_daily_digest,
         trigger="cron",
-        hour=11,
-        minute=11,
+        hour=20,
+minute=8,
     )
     scheduler.start()
     logger.info("Расписание установлено: 11:11 по Москве")
