@@ -299,7 +299,7 @@ async def main():
         send_daily_digest,
         trigger="cron",
         hour=20,
-        minute=810,
+        minute=10,
     )
     scheduler.start()
     logger.info("Расписание установлено: 20:10 по Москве")
