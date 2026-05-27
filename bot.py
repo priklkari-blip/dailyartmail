@@ -281,11 +281,11 @@ async def main():
     scheduler.add_job(
         send_daily_digest,
         trigger="cron",
-        hour=21,
-        minute=40,
+        hour=19,
+        minute=25,
     )
     scheduler.start()
-    logger.info("Расписание установлено: 21:40 по Москве")
+    logger.info("Расписание установлено: 19:25 по Москве")
     while True:
         await asyncio.sleep(3600)
 
