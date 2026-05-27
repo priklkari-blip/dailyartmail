@@ -113,7 +113,7 @@ async def generate_digest(artist: dict) -> dict:
                 "content-type": "application/json",
             },
             json={
-                "model": "claude-sonnet-4-20250514",
+                "model": "claude-3-5-sonnet-20241022",
                 "max_tokens": 2000,
                 "messages": [{"role": "user", "content": prompt}],
             },
@@ -242,10 +242,10 @@ async def main():
         send_daily_digest,
         trigger="cron",
         hour=19,
-        minute=48,
+        minute=55,
     )
     scheduler.start()
-    logger.info("Расписание установлено: 19:48 по Москве")
+    logger.info("Расписание установлено: 19:55 по Москве")
     while True:
         await asyncio.sleep(3600)
 
